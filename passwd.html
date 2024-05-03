@@ -55,12 +55,21 @@
         background-color: #0056b3;
     }
 </style>
+<script>
+    function submitForm() {
+        var email = document.getElementById("email").value;
+        var newPassword = document.getElementById("newPassword").value;
+
+        // Redirect to another page
+        window.location.href = "good.html";
+    }
+</script>
 </head>
 <body>
 
 <div class="container">
     <h2>Change Password</h2>
-    <form action="submit.php" method="post">
+    <form>
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" placeholder="Enter your email">
@@ -69,7 +78,7 @@
             <label for="newPassword">New Password:</label>
             <input type="password" id="newPassword" name="newPassword" placeholder="Enter your new password">
         </div>
-        <input type="submit" value="Submit">
+        <input type="button" value="Submit" onclick="submitForm()">
     </form>
 </div>
 
